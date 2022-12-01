@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comida EZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Comida EZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacion.html">Información</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contenido
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="receta.html">Recetas</a></li>
+                            <li><a class="dropdown-item" href="restaurantes.html">Restaurantes</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Mi cuenta</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalLogin">Ingresar</a>
+                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registro</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Publicar</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--Fin del Navbar-->
+
+    <!-- Modal Login-->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ingresar</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form action="index.html">
+                            <label for="">Correo</label>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Correo" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+
+                            <label for="">Contraseña</label>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" name="" id="" aria-describedby="helpId"
+                                    placeholder="Contraseña">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center" class=".flex-column">
+
+                    <button type="submit" class="btn btn-primary btn-green col-md-8">Entrar</button>
+                </div>
+                </form>
+
+                <hr width=90%>
+
+                <div class="bordeRegistro">
+                    <p align="right">No tienes cuenta! <a data-bs-toggle="modal" href="#modalRegistro">Registrate
+                            aquí</a>&nbsp&nbsp&nbsp&nbsp</p>
+                    <!--Aquiiiiiiiiii-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Registro-->
+    <div class="modal" tabindex="-1" role="dialog" id="modalRegistro">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear cuenta</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden" : "")'>
+
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="Nombre" placeholder="Nombre o Nombres"
+                                    required minlength="2" maxlength="15">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="Apellido" placeholder="Apellidos" required
+                                    minlength="2" maxlength="20">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="Correo" placeholder="Tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="Contraseña" placeholder="Contraseña"
+                                required name=up pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                title="La contraseña debe contener por lo menos un numero, una letra minuscula y una letra mayuscula y tener por lo menos 6 caracteres.">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="ConfContraseña"
+                                placeholder="Confirmar contraseña" required name=up2>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="submit" class="btn btn-primary col-md-8 btn-green">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Carrousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-food-food-snack-eating-goods-image_14522.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-food-food-snack-eating-goods-image_14522.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-food-food-snack-eating-goods-image_14522.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--Fin de Carrousel-->
+
+    <h1>Todo lo que necesitas saber para comer rico dentro y fuera de casa</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia modi, necessitatibus qui quisquam quidem ut quasi aspernatur natus excepturi est accusantium voluptatem quo iusto similique quae numquam illo provident a odit eos nostrum corporis sit beatae harum. Recusandae facere repellendus nemo exercitationem provident eaque quo magni vitae, omnis alias fugit doloremque excepturi ipsum corrupti quisquam rem expedita reiciendis quia. Est debitis ad dolorem ullam quaerat consequatur deserunt voluptatem eius laudantium expedita sint, culpa autem ipsa unde recusandae molestias harum. Delectus quos nesciunt et eligendi dicta iure unde, excepturi velit. Saepe nobis, iure quasi architecto totam consequatur non atque assumenda modi.</p>
+    <br>
+    <ul>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, a?</li>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, a?</li>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, a?</li>
+    </ul>
+    <!--Footer-->
+    <div class="footer row">
+        <div class="col-4">
+            <h4>Contenido</h4>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="recetas.html">Recetas</a></li>
+                <li><a href="restaurantes.html">Restaurantes</a></li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h4>Fuentes</h4>
+        </div>
+        <div class="col-4" id="Contacto-footer">
+            <h4><a href="contacto.html">Contacto</a></h4>
+                <a href="https://twitter.com" id="Twitter"><span class="label"><img src="https://cdn-icons-png.flaticon.com/512/60/60580.png" alt="Twitter" width="50"></span></a>            
+                <a href="https://www.instagram.com" id="Instagram"><span class="label"><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Instagram" width="50"></span></a>
+            <p>contacto@comidaez.com</p>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
+    <script src="/assets/scripts/main.js"></script>
+</body>
+
+</html>

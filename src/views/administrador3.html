@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comida EZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Comida EZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                </ul>
+                <ul style="text-align: right;"> <img style=" width: 19px;
+                    height: 19px;"src="https://cdn.icon-icons.com/icons2/3005/PNG/512/join_enter_login_icon_188213.png" alt="">Administrador</ul>
+                <a href=""></a>
+               
+            </div>
+        </div>
+    </nav>
+    <!--Fin del Navbar-->
+
+
+   
+    <!--TABLA VISTA ADMINISTRADOR  -->
+
+    <section class="crud">
+      <article>
+        <h2 class="crud-title">Vista de usuarios</h2>
+        <form class="crud-form">
+          <input class="input_label" type="text" name="nombre" placeholder="Nombre " required>
+          <input class="input_label" type="text" name="apellido" placeholder="apellido" required>
+          <input class="input_label" type="text" name="correo" placeholder="correo" required>
+          <input class="input_label" type="text" name="contraseña" placeholder="contraseña" required>
+          <input class="input_label" type="text" name="admin" placeholder="admin" required>
+          <input class="input_submit" type="submit" value="GUARDAR">
+          <input type="hidden" name="id">
+        </form>
+      </article>
+  
+      <article class="data-request">
+        <table class="crud-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>correo</th>
+              <th>contraseña</th>
+              <th>admin</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+            <tbody></tbody>
+        </table>
+      </article>
+    </section>
+  
+    <template id="crud-template">
+      <tr>
+        <td class="name"></td>
+        <td class="apellido"></td>
+        <td  class="correo"></td>
+        <td  class="contraseña"></td>
+        <td  class="admin"></td>
+        <td>
+          <button class="edit">Editar</button>
+          <button class="delete">Eliminar</button>
+        </td>
+      </tr>
+    </template>
+
+    <a href="administrador2.html">Recetas</a>
+    <a href="administrador.html">Restaurantes</a>
+
+  
+    <!--Footer-->
+    <div class="footer row">
+        <div class="col-4">
+            <h4>Contenido</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="receta.html">Recetas</a></li>
+              <li><a href="restaurantes.html">Restaurantes</a></li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h4>Fuentes</h4>
+        </div>
+        <div class="col-4" id="Contacto-footer">
+            <h4><a href="contacto.html">Contacto</a></h4>
+                <a href="https://twitter.com" id="Twitter"><span class="label"><img src="https://cdn-icons-png.flaticon.com/512/60/60580.png" alt="Twitter" width="50"></span></a>            
+                <a href="https://www.instagram.com" id="Instagram"><span class="label"><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Instagram" width="50"></span></a>
+            <p>contacto@comidaez.com</p>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
+    <script src="/assets/scripts/scripts3.js"></script>
+</body>
+
+</html>
