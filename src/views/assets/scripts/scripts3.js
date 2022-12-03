@@ -7,7 +7,7 @@ const $fragement = $d.createDocumentFragment();
 
 const getAll = async () => {
     try {
-        let res = await axios.get("http://localhost:3000/usuarios")
+        let res = await axios.get("https://daswo2022-equipo7.herokuapp.com/usuarios")
         let json = await res.data;
         json.forEach(el => {            
             $template.querySelector(".name").textContent = el.nombre;
@@ -55,7 +55,7 @@ $d.addEventListener("submit", async e => {
                     })
                 };
 
-                let res = await axios("http://localhost:3000/usuarios/nuevo", options)
+                let res = await axios("https://daswo2022-equipo7.herokuapp.com/usuarios/nuevo", options)
                 let json = await res.data;
 
                 location.reload();
@@ -80,10 +80,10 @@ $d.addEventListener("submit", async e => {
                     })
                 };
 
-                let res = await axios(`http://localhost:3000/usuarios/actualizar/nombre${e.target.id.value}`, options)
+                let res = await axios(`https://daswo2022-equipo7.herokuapp.com/usuarios/actualizar/nombre${e.target.id.value}`, options)
                 let json = await res.data;
                 location.reload();
-                location.replace('https://http://localhost:3000/administrador3.html');
+                location.replace('https://https://daswo2022-equipo7.herokuapp.com/administrador3.html');
             } catch (error) {
 
                 let message = error.statusText || "Ocurrió un error";
@@ -118,7 +118,7 @@ $d.addEventListener("click", async e => {
                     }
                 };
               
-               let res = await axios(`http://localhost:3000/usuarios/eliminar${e.target.dataset.id}`, options)
+               let res = await axios(`https://daswo2022-equipo7.herokuapp.com/usuarios/eliminar${e.target.dataset.id}`, options)
                 let json = await res.data;
 
                 location.reload();

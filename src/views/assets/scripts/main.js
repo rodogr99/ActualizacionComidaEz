@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    axios.get('http://localhost:3000/usuarios').then(respuesta=>{
+    axios.get('https://daswo2022-equipo7.herokuapp.com/usuarios').then(respuesta=>{
         console.log(respuesta.data);
         const usuarios = respuesta.data;
         const contenedor = document.getElementById('usuarios');

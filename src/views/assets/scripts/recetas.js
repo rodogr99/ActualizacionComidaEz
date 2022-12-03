@@ -7,7 +7,7 @@ const $fragement = $d.createDocumentFragment();
 
 const getAll = async () => {
     try {
-        let res = await axios.get("http://localhost:3000/recetas")
+        let res = await axios.get("https://daswo2022-equipo7.herokuapp.com/recetas")
         let json = await res.data;
         json.forEach(el => {            
             $template.querySelector(".name").textContent = el.nombre;
@@ -50,7 +50,7 @@ $d.addEventListener("submit", async e => {
                     })
                 };
 
-                let res = await axios("http://localhost:3000/recetas/nueva", options)
+                let res = await axios("https://daswo2022-equipo7.herokuapp.com/recetas/nueva", options)
                 let json = await res.data;
 
                 location.reload();

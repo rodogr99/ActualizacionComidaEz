@@ -2,7 +2,7 @@
 
 function obtenerRecetas() {
     console.log('1111111111111111111');
-    makeRequest('http://localhost:3000/recetas', 'GET', null, 
+    makeRequest('https://daswo2022-equipo7.herokuapp.com/recetas', 'GET', null, 
     (value) => {
         console.log('Ok');
         console.log(value);

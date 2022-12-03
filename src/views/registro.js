@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         console.log(data)
         axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
         axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-        axios.post('http://localhost:3000/usuarios/nuevo', data).then(response =>
+        axios.post('https://daswo2022-equipo7.herokuapp.com/usuarios/nuevo', data).then(response =>
         console.log('success',response)
        ).catch(err=>
         console.log(err)
